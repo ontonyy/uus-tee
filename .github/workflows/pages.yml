@@ -28,16 +28,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Validate HTML
-        run: npx --yes html-validate index.html contact.html
+      - name: Install Dependencies
+        run: npm install
 
-      - name: Check JavaScript Syntax
-        run: |
-          node --check js/i18n.js
-          node --check js/main.js
+      - name: Typecheck
+        run: npm run typecheck
 
-      - name: Check Website References
-        run: node scripts/validate-site.js
+      - name: Build
+        run: npm run build
 
   deploy:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
@@ -50,13 +48,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         id: deployment

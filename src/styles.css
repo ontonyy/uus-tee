@@ -9,7 +9,6 @@
   --line: #d6e1dd;
   --shadow: 0 16px 40px rgba(16, 42, 51, 0.1);
   --radius: 1rem;
-  --radius-sm: 0.75rem;
   --page-pad: clamp(1rem, 1.1vw + 0.75rem, 2rem);
 }
 
@@ -32,7 +31,7 @@ body {
   margin: 0;
   min-width: 320px;
   overflow-x: hidden;
-  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   color: var(--text);
   background:
@@ -189,7 +188,8 @@ a {
   gap: 0.25rem;
 }
 
-.site-nav a {
+.site-nav a,
+.footer-links a {
   text-decoration: none;
   font-weight: 600;
   color: var(--muted);
@@ -199,9 +199,17 @@ a {
 }
 
 .site-nav a:hover,
-.site-nav a:focus-visible {
+.site-nav a:focus-visible,
+.footer-links a:hover,
+.footer-links a:focus-visible {
   color: var(--text);
   background: #e9f1ee;
+}
+
+.site-nav a.active,
+.footer-links a.active {
+  color: var(--primary-strong);
+  background: #dcefed;
 }
 
 .section {
