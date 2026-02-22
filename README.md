@@ -30,12 +30,21 @@ No build tools are needed.
 
 1. Push this project to a GitHub repository.
 2. In GitHub, go to `Settings` -> `Pages`.
-3. Under **Build and deployment**, choose:
-   - Source: `Deploy from a branch`
-   - Branch: `main` (or your default branch)
-   - Folder: `/ (root)`
-4. Save and wait for deployment.
-5. Your site will be available at your GitHub Pages URL.
+3. Under **Build and deployment**, set **Source** to `GitHub Actions`.
+4. Push to `main` or `master`. The workflow `.github/workflows/pages.yml` will:
+   - validate HTML and JavaScript
+   - check local file/link references
+   - deploy automatically to GitHub Pages if checks pass
+5. Your site will be available at your GitHub Pages URL shown in the workflow output.
+
+## GitHub Actions
+
+Workflow file: `.github/workflows/pages.yml`
+
+Triggers:
+- Push to `main` or `master`: validate + deploy
+- Pull request to `main` or `master`: validate only
+- Manual run: available via `workflow_dispatch`
 
 ## Change Hero Image
 
