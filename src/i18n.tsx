@@ -17,7 +17,9 @@ const translations: Record<Language, Dictionary> = {
       homeDescription:
         'Uustee is a welcoming community-focused space with a friendly approach and reliable contact.',
       contactTitle: 'Uustee | Contact',
-      contactDescription: 'Contact Uustee by email, phone, or Facebook. Find us in Loksa, Estonia.'
+      contactDescription: 'Contact Uustee by email, phone, or Facebook. Find us in Loksa, Estonia.',
+      notFoundTitle: 'Uustee | Page not found',
+      notFoundDescription: 'The page you are looking for does not exist.'
     },
     a11y: {
       skip: 'Skip to main content',
@@ -81,6 +83,11 @@ const translations: Record<Language, Dictionary> = {
       mapTitle: 'Address',
       mapIframeTitle: 'Uustee map location'
     },
+    notFound: {
+      title: 'Page not found',
+      text: 'Sorry, the page you are looking for does not exist or has been moved.',
+      cta: 'Back to home'
+    },
     footer: {
       rights: 'All rights reserved.'
     }
@@ -92,7 +99,9 @@ const translations: Record<Language, Dictionary> = {
         'Uustee — это дружелюбное сообщество с понятной коммуникацией и удобной связью.',
       contactTitle: 'Uustee | Контакты',
       contactDescription:
-        'Свяжитесь с Uustee по email, телефону или через Facebook. Мы находимся в Локса, Эстония.'
+        'Свяжитесь с Uustee по email, телефону или через Facebook. Мы находимся в Локса, Эстония.',
+      notFoundTitle: 'Uustee | Страница не найдена',
+      notFoundDescription: 'Запрашиваемая страница не существует.'
     },
     a11y: {
       skip: 'Перейти к основному содержимому',
@@ -156,6 +165,11 @@ const translations: Record<Language, Dictionary> = {
       mapTitle: 'Адрес',
       mapIframeTitle: 'Карта расположения Uustee'
     },
+    notFound: {
+      title: 'Страница не найдена',
+      text: 'Извините, запрашиваемая страница не существует или была перемещена.',
+      cta: 'На главную'
+    },
     footer: {
       rights: 'Все права защищены.'
     }
@@ -167,7 +181,9 @@ const translations: Record<Language, Dictionary> = {
         'Uustee on soe ja kogukonnale suunatud koht, kus suhtlus on lihtne ja usaldusväärne.',
       contactTitle: 'Uustee | Kontakt',
       contactDescription:
-        'Võta Uusteega ühendust e-posti, telefoni või Facebooki kaudu. Asume Loksal, Eestis.'
+        'Võta Uusteega ühendust e-posti, telefoni või Facebooki kaudu. Asume Loksal, Eestis.',
+      notFoundTitle: 'Uustee | Lehte ei leitud',
+      notFoundDescription: 'Otsitavat lehte ei ole olemas.'
     },
     a11y: {
       skip: 'Liigu põhisisu juurde',
@@ -229,6 +245,11 @@ const translations: Record<Language, Dictionary> = {
       },
       mapTitle: 'Aadress',
       mapIframeTitle: 'Uustee asukoha kaart'
+    },
+    notFound: {
+      title: 'Lehte ei leitud',
+      text: 'Vabandust, otsitavat lehte ei ole olemas või see on teisaldatud.',
+      cta: 'Tagasi avalehele'
     },
     footer: {
       rights: 'Kõik õigused kaitstud.'

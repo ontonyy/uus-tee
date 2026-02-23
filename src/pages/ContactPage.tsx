@@ -1,4 +1,4 @@
-import { FormEvent, useMemo, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useRef, useState } from 'react';
 import { ADDRESS } from '../constants';
 import { ContactLinks } from '../components/ContactLinks';
 import { usePageMeta } from '../hooks/usePageMeta';
@@ -7,11 +7,18 @@ import { useI18n } from '../i18n';
 export function ContactPage() {
   const { t } = useI18n();
   const [showSuccess, setShowSuccess] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   usePageMeta({
     title: t('meta.contactTitle'),
     description: t('meta.contactDescription')
   });
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const mapSrc = useMemo(
     () => `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&output=embed`,
@@ -22,6 +29,12 @@ export function ContactPage() {
     event.preventDefault();
     event.currentTarget.reset();
     setShowSuccess(true);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setShowSuccess(false), 5000);
+  }
+
+  function handleFormChange() {
+    if (showSuccess) setShowSuccess(false);
   }
 
   return (
@@ -42,7 +55,7 @@ export function ContactPage() {
 
           <article className="contact-card">
             <h2>{t('contact.formTitle')}</h2>
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form className="contact-form" onSubmit={handleSubmit} onChange={handleFormChange}>
               <label htmlFor="name">{t('contact.form.nameLabel')}</label>
               <input id="name" name="name" type="text" autoComplete="name" required placeholder={t('contact.form.namePlaceholder')} />
 
