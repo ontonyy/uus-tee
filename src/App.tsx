@@ -19,6 +19,8 @@ function AppContent() {
   }, [language]);
 
   useEffect(() => {
+    // Intentional: close mobile menu when the route changes.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMenuOpen(false);
   }, [location.pathname, location.hash]);
 
