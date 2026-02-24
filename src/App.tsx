@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { HashRouter, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { ContactPage } from './pages/ContactPage';
+import { FeedPage } from './pages/FeedPage';
 import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { LanguageProvider, useI18n } from './i18n';
@@ -115,6 +116,7 @@ function AppContent() {
             <NavLink to="/" end>
               {t('nav.home')}
             </NavLink>
+            <NavLink to="/feed">{t('nav.feed')}</NavLink>
             <NavLink to="/contact">{t('nav.contact')}</NavLink>
           </nav>
         </div>
@@ -123,6 +125,7 @@ function AppContent() {
       <main id="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/feed" element={<FeedPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
@@ -137,6 +140,7 @@ function AppContent() {
             <NavLink to="/" end>
               {t('nav.home')}
             </NavLink>
+            <NavLink to="/feed">{t('nav.feed')}</NavLink>
             <NavLink to="/contact">{t('nav.contact')}</NavLink>
           </div>
         </div>

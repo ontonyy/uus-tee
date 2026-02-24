@@ -19,6 +19,8 @@ const translations: Record<Language, Dictionary> = {
         'Uustee is a welcoming community-focused space with a friendly approach and reliable contact.',
       contactTitle: 'Uustee | Contact',
       contactDescription: 'Contact Uustee by email, phone, or Facebook. Find us in Loksa, Estonia.',
+      feedTitle: 'Uustee | Videos',
+      feedDescription: 'Watch Uustee videos, latest updates, and community moments.',
       notFoundTitle: 'Uustee | Page not found',
       notFoundDescription: 'The page you are looking for does not exist.'
     },
@@ -31,6 +33,7 @@ const translations: Record<Language, Dictionary> = {
     },
     nav: {
       home: 'Home',
+      feed: 'Videos',
       contact: 'Contact'
     },
     home: {
@@ -84,6 +87,29 @@ const translations: Record<Language, Dictionary> = {
       mapTitle: 'Address',
       mapIframeTitle: 'Uustee map location'
     },
+    feed: {
+      title: 'Videos',
+      subtitle: 'Watch our latest updates and community moments.',
+      empty: 'No videos available yet.',
+      videoUnavailable: 'Video is currently unavailable.',
+      play: 'Play video',
+      mute: 'Mute',
+      unmute: 'Unmute',
+      posts: {
+        welcome: {
+          title: 'Welcome to Uustee',
+          description: 'A brief introduction to our space.'
+        },
+        workshop: {
+          title: 'Community Workshop',
+          description: 'Highlights from our recent workshop.'
+        },
+        community: {
+          title: 'Community Gathering',
+          description: 'Spending time together.'
+        }
+      }
+    },
     notFound: {
       title: 'Page not found',
       text: 'Sorry, the page you are looking for does not exist or has been moved.',
@@ -101,6 +127,8 @@ const translations: Record<Language, Dictionary> = {
       contactTitle: 'Uustee | Контакты',
       contactDescription:
         'Свяжитесь с Uustee по email, телефону или через Facebook. Мы находимся в Локса, Эстония.',
+      feedTitle: 'Uustee | Видео',
+      feedDescription: 'Смотрите видео Uustee, последние новости и моменты из жизни сообщества.',
       notFoundTitle: 'Uustee | Страница не найдена',
       notFoundDescription: 'Запрашиваемая страница не существует.'
     },
@@ -113,6 +141,7 @@ const translations: Record<Language, Dictionary> = {
     },
     nav: {
       home: 'Главная',
+      feed: 'Видео',
       contact: 'Контакты'
     },
     home: {
@@ -166,6 +195,29 @@ const translations: Record<Language, Dictionary> = {
       mapTitle: 'Адрес',
       mapIframeTitle: 'Карта расположения Uustee'
     },
+    feed: {
+      title: 'Видео',
+      subtitle: 'Смотрите наши последние видео и моменты из жизни сообщества.',
+      empty: 'Видео пока нет.',
+      videoUnavailable: 'Видео недоступно.',
+      play: 'Воспроизвести видео',
+      mute: 'Отключить звук',
+      unmute: 'Включить звук',
+      posts: {
+        welcome: {
+          title: 'Добро пожаловать в Uustee',
+          description: 'Краткое знакомство с нашим пространством.'
+        },
+        workshop: {
+          title: 'Семинар',
+          description: 'Моменты с нашего недавнего семинара.'
+        },
+        community: {
+          title: 'Встреча',
+          description: 'Проводим время вместе.'
+        }
+      }
+    },
     notFound: {
       title: 'Страница не найдена',
       text: 'Извините, запрашиваемая страница не существует или была перемещена.',
@@ -183,6 +235,8 @@ const translations: Record<Language, Dictionary> = {
       contactTitle: 'Uustee | Kontakt',
       contactDescription:
         'Võta Uusteega ühendust e-posti, telefoni või Facebooki kaudu. Asume Loksal, Eestis.',
+      feedTitle: 'Uustee | Videod',
+      feedDescription: 'Vaata Uustee videoid, viimaseid uudiseid ja kogukonna hetki.',
       notFoundTitle: 'Uustee | Lehte ei leitud',
       notFoundDescription: 'Otsitavat lehte ei ole olemas.'
     },
@@ -195,6 +249,7 @@ const translations: Record<Language, Dictionary> = {
     },
     nav: {
       home: 'Avaleht',
+      feed: 'Videod',
       contact: 'Kontakt'
     },
     home: {
@@ -246,6 +301,29 @@ const translations: Record<Language, Dictionary> = {
       },
       mapTitle: 'Aadress',
       mapIframeTitle: 'Uustee asukoha kaart'
+    },
+    feed: {
+      title: 'Videod',
+      subtitle: 'Vaata meie viimaseid videoid ja kogukonna hetki.',
+      empty: 'Videoid veel pole.',
+      videoUnavailable: 'Video pole hetkel saadaval.',
+      play: 'Mängi videot',
+      mute: 'Vaigista',
+      unmute: 'Hääl sisse',
+      posts: {
+        welcome: {
+          title: 'Tere tulemast Uusteesse',
+          description: 'Lühike tutvustus meie ruumist.'
+        },
+        workshop: {
+          title: 'Töötuba',
+          description: 'Hetked meie viimasest töötoast.'
+        },
+        community: {
+          title: 'Kogukonna kohtumine',
+          description: 'Veidame koos aega.'
+        }
+      }
     },
     notFound: {
       title: 'Lehte ei leitud',

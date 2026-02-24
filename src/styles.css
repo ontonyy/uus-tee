@@ -626,3 +626,161 @@ a {
     transition: none !important;
   }
 }
+
+/* Feed Page */
+.feed-header {
+  padding: clamp(2rem, 4vw, 3.5rem) 1rem 1.5rem;
+  text-align: center;
+}
+
+.feed-header h1 {
+  margin: 0;
+  font-size: clamp(1.95rem, 4vw + 0.8rem, 3.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.feed-header p {
+  margin: 1rem auto 0;
+  max-width: 54ch;
+  color: var(--muted);
+  font-size: clamp(1rem, 1vw + 0.82rem, 1.15rem);
+}
+
+.feed-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--muted);
+}
+
+.feed-scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: 0 1rem 4rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Video Card */
+.feed-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 80vh;
+  background-color: var(--text);
+  border-radius: clamp(1rem, 2vw, 1.5rem);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.feed-card-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.feed-card-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+  background:
+    radial-gradient(circle at 24% 22%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 40%),
+    linear-gradient(140deg, #6fb2a5, #2f6f78);
+  padding: 2rem;
+  text-align: center;
+}
+
+.feed-card-placeholder-icon {
+  font-size: 3rem;
+  margin: 0 0 1rem;
+}
+
+.feed-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(16, 42, 51, 0.6);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: clamp(4rem, 8vw, 5rem);
+  height: clamp(4rem, 8vw, 5rem);
+  border-radius: 50%;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.feed-play-btn:hover {
+  background: rgba(16, 42, 51, 0.8);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.feed-mute-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(16, 42, 51, 0.5);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  font-size: 1.2rem;
+  transition: background 0.2s ease;
+}
+
+.feed-mute-btn:hover {
+  background: rgba(16, 42, 51, 0.75);
+}
+
+.feed-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(16, 42, 51, 0.95), rgba(16, 42, 51, 0));
+  color: #fff;
+  pointer-events: none;
+}
+
+.feed-card-title {
+  font-size: clamp(1.2rem, 2vw + 0.5rem, 1.4rem);
+  font-weight: 700;
+  margin: 0 0 0.35rem 0;
+  color: #fff;
+}
+
+.feed-card-desc {
+  font-size: 1rem;
+  margin: 0 0 0.6rem 0;
+  opacity: 0.95;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.feed-card-date {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  color: #fff;
+  font-weight: 500;
+}
