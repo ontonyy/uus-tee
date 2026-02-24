@@ -4,3 +4,9 @@ dist/
 .DS_Store
 .idea/
 ai-history.json
+
+# AI tools and agents
+.cursorrules
+.agents/
+.cursor/
+.windsurf/
